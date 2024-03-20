@@ -11,7 +11,7 @@ private:
     double  m_balance = 0;
     double  m_interest_rate = DEFAULT_IR;
 
-    Client* m_owner = nullptr;
+    Client* m_owner   = nullptr;
     Client* m_partner = nullptr;
 
 public:
@@ -20,16 +20,17 @@ public:
     Account(int t_n, Client* t_c, Client* t_p);
     Account(int t_n, Client* t_c, Client* t_p, double t_ir);
 
-    int get_number();
-    double get_balance();
-    double get_ir();
+    int     get_number();
+    double  get_balance();
+    double  get_ir();
+    double  set_ir(double t_ir);
     Client* get_owner();
     Client* get_partner();
-    bool can_withdraw(double t_a);
+    bool    can_withdraw(double t_a);
 
-    void deposit(double t_a);
-    bool withdraw(double t_a);
-    void add_interest();
+    void    deposit(double t_a);
+    bool    withdraw(double t_a);
+    void    add_interest();
 };
 
 

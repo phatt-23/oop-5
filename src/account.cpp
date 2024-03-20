@@ -3,7 +3,7 @@
 #include "include/client.h"
 
 #define ERROR "<<ERROR>> "
-#define FUNC "@fn: '" << __PRETTY_FUNCTION__ << "' "
+#define FUNC  "@fn: '" << __PRETTY_FUNCTION__ << "' "
 
 
 Account::Account(int t_n, Client* t_c)
@@ -39,6 +39,10 @@ double Account::get_balance() {
 
 double Account::get_ir() {
     return this->m_interest_rate;
+}
+
+double Account::set_ir(double t_ir) {
+    m_interest_rate = t_ir;
 }
 
 Client* Account::get_owner() {

@@ -8,7 +8,7 @@ const int acc_id_base = 789456;
 
 struct Person {
     const char* m_name;
-    const int m_id;
+    const int   m_id;
 };
 
 Person people_list[] = {

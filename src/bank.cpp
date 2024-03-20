@@ -201,5 +201,4 @@ bool Bank::withdraw_for(Account* t_a, double t_d) {
         << "Couldn't find the account for withdraw!" 
         << std::endl;
     return false;
-
 }
