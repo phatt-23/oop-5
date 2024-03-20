@@ -11,7 +11,8 @@ private:
     int m_clients_index;
     Account** m_accounts;
     int m_accounts_count;
-    int m_accounts_index;
+    int 
+    m_accounts_index;
 
 public:
     Bank(int t_c, int t_a);
@@ -24,6 +25,9 @@ public:
     Account* create_account(int t_n, Client* t_c, Client* t_p, double t_ir);
     void add_interest();
     void print();
+    bool m_check_if_exits(int t_n);
+    bool deposit_for(Account* t_a, double t_d);
+    bool withdraw_for(Account* t_a, double t_d);
 };
 
 #endif//__BANK_H

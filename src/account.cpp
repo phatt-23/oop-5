@@ -2,6 +2,10 @@
 
 #include "include/client.h"
 
+#define ERROR "<<ERROR>> "
+#define FUNC "@fn: '" << __PRETTY_FUNCTION__ << "' "
+
+
 Account::Account(int t_n, Client* t_c)
     : m_number(t_n), m_owner(t_c)
 {}
@@ -60,8 +64,12 @@ bool Account::withdraw(double t_a) {
     if(can_withdraw(t_a)) {
         m_balance -= t_a;
         return true;
-    } else return false;
-    
+    } else {
+        std::cout << ERROR << FUNC
+            << "Insifficient funds for withdraw!"
+            << std::endl;
+        return false;
+    }
 }
 
 void Account::add_interest() {
