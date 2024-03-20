@@ -23,11 +23,10 @@ public:
     int     get_number();
     double  get_balance();
     double  get_ir();
-    double  set_ir(double t_ir);
+    void    set_ir(double t_ir);
     Client* get_owner();
     Client* get_partner();
     bool    can_withdraw(double t_a);
-
     void    deposit(double t_a);
     bool    withdraw(double t_a);
     void    add_interest();
